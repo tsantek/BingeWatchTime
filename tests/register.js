@@ -1,4 +1,5 @@
 let Register = require("../pageObjects/registerScript.js");
+let Login = require("../pageObjects/loginScript.js");
 
 let pageTitle = "Binge Watch Time";
 let aplicationName = "Binge Watch Time";
@@ -44,19 +45,19 @@ describe("Verify Register page work correctly", () => {
 	});
 
 	it("Check link to Privacy", (done)  => {
-		Register.clickPrivacyLink();
+		Login.clickPrivacyLink();
 		browser.pause(2000);
 		expect( browser.getUrl() == privacyLink).to.be.true;
 	});
 
 	it("Check link to Terms of use", (done)  => {
-		Register.clickTermOfUseLink();
+		Login.clickTermOfUseLink();
 		browser.pause(2000);
 		expect( browser.getUrl() == termOfUseLink).to.be.true;
 	});
 
 	it("Check link to Contact", (done)  => {
-		Register.clickContactLink();
+		Login.clickContactLink();
 		browser.pause(2000);
 		expect( browser.getUrl() == contactLink).to.be.true;
 	});
