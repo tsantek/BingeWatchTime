@@ -7,5 +7,5 @@ Test written in JavaScript with WebdriverIO, Wdio, Mocha, Selenium Standalone. T
 
 Allure Report:
 
-![Allure Report with Jankins](https://github.com/tsantek/BingeWatchTime/blob/master/testScreenshot.png "Allure Report with Jankin")
+![Allure Report with Jankins](https://github.com/tsantek/BingeWatchTime/blob/master/testScreenshots/testScreenshot.png "Allure Report with Jankin")
 
