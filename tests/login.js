@@ -1,14 +1,16 @@
-var Login = require("../pageObjects/loginScript.js");
+let Login = require("../pageObjects/loginScript.js");
 
-var pageTitle = "Binge Watch Time";
-var aplicationName = "Binge Watch Time";
-var pageLoginEmail = "santek.vg@gmail.com";
-var pageLoginPassword = "santek007";
-var forgotYourPasswordLink = "http://staging.bingewatchtime.com/auth/forgot";
-var registerLink = "http://staging.bingewatchtime.com/auth/register";
-var privacyLink = "http://staging.bingewatchtime.com/privacy";
-var termOfUseLink = "http://staging.bingewatchtime.com/terms";
-var contactLink = "https://vanja.gavric.org/#contact";
+let pageTitle = "Binge Watch Time";
+let aplicationName = "Binge Watch Time";
+let helloText = "Hi. Sign in.";
+let pageLoginEmail = "santek.vg@gmail.com";
+let pageLoginPassword = "santek007";
+let textAccountMessage = "Don't have an account? Register";
+let forgotYourPasswordLink = "http://staging.bingewatchtime.com/auth/forgot";
+let registerLink = "http://staging.bingewatchtime.com/auth/register";
+let privacyLink = "http://staging.bingewatchtime.com/privacy";
+let termOfUseLink = "http://staging.bingewatchtime.com/terms";
+let contactLink = "https://vanja.gavric.org/#contact";
 
 
 beforeEach(function() {
@@ -24,6 +26,15 @@ describe("Verify login page work correctly", () => {
 		expect($('.app-name').getText() == aplicationName).to.be.true;
 	});
 
+	it("Check page h2 Hello text", (done)=> {
+		browser.pause(1000);
+		expect($('h2').getText() == helloText).to.be.true;
+	});
+
+	it("Check page Account Message", (done)=> {
+		browser.pause(1000);
+		expect($('.message-text:nth-of-type(2)').getText() == textAccountMessage).to.be.true;
+	});
 
 	it("Check link to Forgot your password works", (done)  => {
 		browser.pause(1000);
@@ -45,11 +56,9 @@ describe("Verify login page work correctly", () => {
 	});
 
 	it("Check link to Terms of use", (done)  => {
-
 		Login.clickTermOfUseLink();
 		browser.pause(2000);
 		expect( browser.getUrl() == termOfUseLink).to.be.true;
-
 	});
 
 	it("Check link to Contact", (done)  => {
@@ -58,10 +67,7 @@ describe("Verify login page work correctly", () => {
 		expect( browser.getUrl() == contactLink).to.be.true;
 	});
 
-
-	
 	it("Check login form works with email only ", (done)  => {
-
 		Login.setEmail(pageLoginEmail);
 		browser.pause(2000);
 		browser.click('.button-loader');

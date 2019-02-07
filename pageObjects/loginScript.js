@@ -50,7 +50,6 @@ class Login {
 		expect(this.successfulLoginConfirmation.isExisting()).to.be.true;
 	}
 	
-
 	submitAllInformation(email, password){
 		if(email) {
 			this.email.setValue(email);
