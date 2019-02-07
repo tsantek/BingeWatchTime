@@ -1,0 +1,2 @@
+Login Script => email password and keep me login
+		need to find css class for email login, keep me login and submite button + links to pages Forgot password, register, privacy policy, terms f use and contact

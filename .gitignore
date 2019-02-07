@@ -1,0 +1,9 @@
+# dependencies
+/node_modules
+
+
+# test reports
+/reports
+/allure-report
+/AllureReports
+/jenkins
