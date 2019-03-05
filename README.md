@@ -1,7 +1,7 @@
 # BingeWatchTime
 
 
-Automation test script for BingWatchTime Login page.  
+Automated test script for BingWatchTime.  
 
 Test written in JavaScript with WebdriverIO, Wdio, Mocha, Selenium Standalone. Test is prepare to generate Allure Reports with Jenkins. 
 
